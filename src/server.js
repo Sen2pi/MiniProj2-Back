@@ -3,6 +3,8 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 import authRoutes from './routes/auth.js'
 import animalsRoutes from './routes/animals.js'
+import expertsRoutes from './routes/experts.js'
+import sponsorsRoutes from './routes/sponsors.js'
 import config from './config/config.js'
 
 const app = express()
@@ -15,9 +17,12 @@ app.get('/', (req, res) => {
 
 app.use(authRoutes)
 app.use(animalsRoutes)
+app.use(expertsRoutes)
+app.use(sponsorsRoutes)
 
 const PORT = process.env.PORT || 8080
 
+console.log('Mongo URI:', config.uri)
 mongoose.connect(config.uri).then(() => {
   app.listen(PORT, () => {
     console.log(`Your app is listening on ${PORT}`)
