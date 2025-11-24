@@ -78,4 +78,3 @@ Content-Type: application/json
 - Porta padrão: `8080`.
 
 ---
-![Modern](https://img.shields.io/badge/Design-Modern-ff69b4) ![No%20Hardcode](https://img.shields.io/badge/Data-No%20Hardcode-success) ![Seed](https://img.shields.io/badge/Seed-admin%2Fadmin-brightgreen)
